@@ -53,6 +53,7 @@ public class EnderecoController {
 
         Endereco endereco = new Endereco();
         BeanUtils.copyProperties(enderecoDTO, endereco);
+        endereco.setId(id);
         return ResponseEntity.status(HttpStatus.CREATED).body(enderecoService.save(endereco));
     }
 

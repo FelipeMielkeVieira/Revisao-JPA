@@ -18,7 +18,6 @@ public class Curso {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @OneToMany
-    @JoinColumn(name = "id_curso")
+    @ManyToMany
     private List<Disciplina> listaDeDisciplinas;
 }

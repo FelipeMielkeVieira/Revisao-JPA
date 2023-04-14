@@ -1,5 +1,6 @@
 package br.sc.senai.escola.model.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;
 import lombok.Data;
 
@@ -18,6 +19,6 @@ public class Disciplina {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @ManyToMany(mappedBy = "listaDeDisciplinas")
+    @ManyToMany
     private List<Professor> listaDeProfessores;
 }

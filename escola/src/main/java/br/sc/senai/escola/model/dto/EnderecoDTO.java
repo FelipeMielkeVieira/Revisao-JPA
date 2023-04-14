@@ -1,9 +1,9 @@
 package br.sc.senai.escola.model.dto;
 
-import jakarta.validation.constraints.NotNull;
-import jakarta.validation.constraints.Positive;
-import jakarta.validation.constraints.Size;
+import jakarta.validation.constraints.*;
+import lombok.Getter;
 
+@Getter
 public class EnderecoDTO {
 
     @NotNull
@@ -21,6 +21,6 @@ public class EnderecoDTO {
     @NotNull
     private String bairro;
 
-    @NotNull @Positive @Size(min = 8, max = 8)
+    @NotNull @Positive @Min(10000000) @Max(99999999)
     private Long cep;
 }

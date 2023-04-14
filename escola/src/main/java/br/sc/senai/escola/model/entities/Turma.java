@@ -18,11 +18,10 @@ public class Turma {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @ManyToOne
+    @ManyToOne(cascade = CascadeType.ALL)
     @JoinColumn(name = "escola_id")
     private Escola escola;
 
-    @OneToMany
-    @JoinColumn(name = "turma_id")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Aluno> listaDeAlunos;
 }

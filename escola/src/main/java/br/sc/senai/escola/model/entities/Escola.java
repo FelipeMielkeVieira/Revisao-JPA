@@ -25,11 +25,9 @@ public class Escola {
     @Column(nullable = false, length = 150)
     private String email;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "escola_id")
+    @OneToMany(mappedBy = "escola")
     private List<Professor> listaDeProfessores;
 
-    @OneToMany(cascade = CascadeType.ALL)
-    @JoinColumn(name = "escola_id")
+    @ManyToMany(cascade = CascadeType.ALL)
     private List<Curso> listaDeCursos;
 }
