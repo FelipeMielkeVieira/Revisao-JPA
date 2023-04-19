@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>br.sc.senai</groupId>
-	<artifactId>escola</artifactId>
+	<artifactId>hospital</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>escola</name>
-	<description>Projeto de revisão para spring JPA</description>
+	<name>hospital</name>
+	<description>Revisão de Spring JPA</description>
 	<properties>
 		<java.version>17</java.version>
 	</properties>
@@ -61,15 +61,7 @@
 					</excludes>
 				</configuration>
 			</plugin>
-            <plugin>
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-compiler-plugin</artifactId>
-                <configuration>
-                    <source>16</source>
-                    <target>16</target>
-                </configuration>
-            </plugin>
-        </plugins>
+		</plugins>
 	</build>
 
 </project>
