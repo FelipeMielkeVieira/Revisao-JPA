@@ -28,6 +28,6 @@ public class Escola {
     @OneToMany(mappedBy = "escola")
     private List<Professor> listaDeProfessores;
 
-    @ManyToMany(cascade = CascadeType.ALL)
+    @ManyToMany
     private List<Curso> listaDeCursos;
 }
