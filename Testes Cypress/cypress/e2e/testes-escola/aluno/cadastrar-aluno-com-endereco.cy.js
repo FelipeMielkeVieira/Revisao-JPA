@@ -10,7 +10,7 @@ describe("Cadastrar aluno com Endereço", () => {
 
         cy.request("POST", "http://localhost:8085/aluno", aluno).as("CadastrarAluno");
         cy.get("@CadastrarAluno").then(response => {
-            expect(response.body).to.have.property("endereco");
+            expect(response.body).to.have.property("endereco").to.have.property("id");
         })
     })
 })

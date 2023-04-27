@@ -18,7 +18,7 @@ public class Escola {
     @Column(nullable = false, length = 100)
     private String nome;
 
-    @OneToOne(cascade = CascadeType.ALL)
+    @OneToOne
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 

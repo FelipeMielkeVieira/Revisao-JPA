@@ -33,6 +33,6 @@ public class Professor {
     @JsonIgnore
     private List<Disciplina> listaDeDisciplinas;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     private Endereco endereco;
 }

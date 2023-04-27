@@ -22,7 +22,7 @@ public class Aluno {
     @Column(nullable = false, length = 20)
     private String telefone;
 
-    @ManyToOne(cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "endereco_id")
     private Endereco endereco;
 }
